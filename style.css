@@ -468,43 +468,57 @@ footer {
     text-align: center;
 }
 
+.hamburger {
+  display: none;
+}
+
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
     padding-left: 16px;
     padding-right: 16px;
-
-  }
-.navbar,
-.hero {
-  margin-left: -16px;
-  margin-right: -16px;
-  padding-left: 16px;
-  padding-right: 16px;
-}
+   }
+  
+  .navbar,
+  .hero {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+   }
 
   .navbar .container {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-  }
+   }
 
   .logo {
     font-size: 1.4em;
     margin-bottom: 10px;
-  }
+   }
 
   .nav-links {
+    display: none;
     flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
     width: 100%;
-    padding: 0;
-    margin: 0;
-  }
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   }
+  
+  .nav-links.active {
+    display: flex;
+   }
+
 
   .nav-links li {
     width: 100%;
-  }
+   }
 
   .nav-links li a {
     display: block;
@@ -512,23 +526,33 @@ footer {
     padding: 10px 0;
     text-align: left;
     word-break: break-word;
-  }
+   }
 
   .search-form {
     width: 100%;
     display: flex;
     gap: 8px;
     margin-top: 10px;
-  }
+   }
 
   .search-form input {
     flex-grow: 1;
     padding: 8px;
-  }
+   }
 
   .search-form button {
     padding: 8px 12px;
-  }
+   }
+
+  .hamburger {
+  display: block;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+ }
 }
 
 
