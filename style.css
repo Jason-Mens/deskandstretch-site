@@ -472,6 +472,9 @@ footer {
   display: none;
 }
 
+.close-btn {
+  display: none;
+}
 
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
