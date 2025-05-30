@@ -468,8 +468,6 @@ footer {
     text-align: center;
 }
 
-
-
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
   body {
@@ -486,43 +484,40 @@ footer {
     padding-right: 16px;
   }
 
-  /* Container now flex column, center align */
+  /* Navbar structure */
   .navbar .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    position: relative; /* for absolute hamburger */
+    position: relative;
   }
 
-  /* Top row with hamburger and logo */
   .navbar .top-row {
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: center; /* centers logo */
+    justify-content: center;
     position: relative;
   }
 
-  /* Hamburger positioned absolute left in top row */
- .hamburger {
-   display: block;
-   font-size: 28px;
-   background: none;
-   border: none;
-   color: #333;
-   cursor: pointer;
-   position: absolute;
-   left: 0;
-   top: 50%;
-   transform: translateY(-50%);
-   z-index: 1001;
-   padding: 10px;
-   background-color: white;
- }
+  /* Hamburger */
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    padding: 10px;
+    background-color: white;
+  }
 
-
-  /* Logo centered */
   .logo {
     font-size: 1.4em;
     margin: 0 auto;
@@ -530,18 +525,18 @@ footer {
     font-weight: bold;
   }
 
-  /* Nav links sliding panel */
+  /* Slide-out mobile nav panel */
   .nav-links {
     display: flex;
     flex-direction: column;
     background-color: #1976d2;
     position: fixed;
-    top: 10px; /* Adjust based on navbar height */
+    top: 0;
     right: 0;
     width: 70vw;
     max-width: 300px;
-    height: calc(100vh - 60px);
-    padding: 20px;
+    height: 100vh;
+    padding: 60px 20px 20px;
     box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
     transform: translateX(100%);
     opacity: 0;
@@ -567,13 +562,25 @@ footer {
     width: 100%;
     padding: 10px 0;
     text-align: left;
-    word-break: break-word;
     font-size: 18px;
     color: #fff;
     text-decoration: none;
   }
 
-  /* Search form centered below */
+  /* Close button */
+  .close-btn {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    margin-left: auto;
+  }
+
+  /* Search bar */
   .search-form {
     width: 90%;
     max-width: 400px;
@@ -599,27 +606,15 @@ footer {
     background-color: #eee;
     cursor: pointer;
   }
-
-  .close-btn {
-   display: block;
-   font-size: 28px;
-   background: none;
-   border: none;
-   color: #fff; /* or your menu link color */
-   cursor: pointer;
-   align-self: flex-end;
-   margin-bottom: 20px;
-   margin-left: auto;
- }
-
 }
 
+/* Tablet styles */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .navbar .container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* allows wrapping if needed */
+    flex-wrap: wrap;
     gap: 16px;
   }
 
@@ -639,78 +634,16 @@ footer {
   }
 
   .hamburger {
-    order: -1; /* pushes it to the left */
+    order: -1;
   }
 }
 
-.hamburger {
-  display: none;
-}
-
+/* Hide hamburger and close-btn by default on large screens */
+.hamburger,
 .close-btn {
   display: none;
 }
 
-/* Always hide nav links by default on small screens */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  gap: 20px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background: white;
-  height: 100vh;
-  width: 80%;
-  padding: 40px 20px;
-  z-index: 1000;
-  transition: transform 0.3s ease-in-out;
-}
 
-/* Show nav links when active */
-.nav-links.active {
-  display: flex;
-}
 
-/* Style the hamburger button */
-.hamburger {
-  display: none; /* Hidden by default, shown below */
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-}
-
-/* Style for the close button inside nav */
-.close-btn {
-  align-self: flex-end;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Responsive: Show hamburger on small screens */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .top-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
 
