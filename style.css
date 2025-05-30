@@ -502,7 +502,7 @@ footer {
  .nav-links {
    display: flex;
    flex-direction: column;
-   background-color: blue;
+   background-color: #1976d2;
    position: fixed;
    top: 60px; /* Adjust based on navbar height */
    right: 0; /* position on the right side */
