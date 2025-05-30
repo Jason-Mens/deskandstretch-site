@@ -537,7 +537,7 @@ footer {
     flex-direction: column;
     background-color: #1976d2;
     position: fixed;
-    top: 60px; /* Adjust based on navbar height */
+    top: 80px; /* Adjust based on navbar height */
     right: 0;
     width: 70vw;
     max-width: 300px;
@@ -602,6 +602,7 @@ footer {
   }
 
   .close-btn {
+   display: block;
    font-size: 28px;
    background: none;
    border: none;
@@ -609,6 +610,7 @@ footer {
    cursor: pointer;
    align-self: flex-end;
    margin-bottom: 20px;
+   margin-left: auto;
  }
 
 }
