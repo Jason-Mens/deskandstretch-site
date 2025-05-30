@@ -8,7 +8,6 @@
   </head>
 
   <body>
-    
 	<nav class="navbar">
 		<div class="container">
 			<a href="#" class="logo">Desk and Stretch</a>
@@ -115,5 +114,14 @@
       <p>&copy; 2025 Desk and Stretch. All rights reserved.</p>
     </footer>
 
+    <script>
+	  const hamburger = document.querySelector('.hamburger');
+	  const navLinks = document.querySelector('.nav-links');
+	
+	  hamburger.addEventListener('click', () => {
+	    navLinks.classList.toggle('active');
+	  });
+    </script>
+	
   </body>
 </html>
