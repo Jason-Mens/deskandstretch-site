@@ -472,102 +472,132 @@ footer {
   display: none;
 }
 
+
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
     padding-left: 16px;
     padding-right: 16px;
-   }
-  
+  }
+
   .navbar,
   .hero {
     margin-left: -16px;
     margin-right: -16px;
     padding-left: 16px;
     padding-right: 16px;
-   }
+  }
 
+  /* Container now flex column, center align */
   .navbar .container {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
-   }
+    position: relative; /* for absolute hamburger */
+  }
 
+  /* Top row with hamburger and logo */
+  .navbar .top-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center; /* centers logo */
+    position: relative;
+  }
+
+  /* Hamburger positioned absolute left in top row */
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+  }
+
+  /* Logo centered */
   .logo {
     font-size: 1.4em;
-    margin-bottom: 10px;
-   }
-
- .nav-links {
-   display: flex;
-   flex-direction: column;
-   background-color: #1976d2;
-   position: fixed;
-   top: 60px; /* Adjust based on navbar height */
-   right: 0; /* position on the right side */
-   width: 70vw; /* about 70% of viewport width */
-   max-width: 300px; /* optional max width */
-   height: calc(100vh - 60px); /* full height minus navbar */
-   padding: 20px;
-   box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1); /* shadow on left */
-   transform: translateX(100%); /* start offscreen right */
-   opacity: 0;
-   pointer-events: none;
-   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-   overflow-y: auto;
-   z-index: 1000;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
   }
 
- .nav-links.active {
-   transform: translateX(0);
-   opacity: 1;
-   pointer-events: auto;
+  /* Nav links sliding panel */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    background-color: #1976d2;
+    position: fixed;
+    top: 60px; /* Adjust based on navbar height */
+    right: 0;
+    width: 70vw;
+    max-width: 300px;
+    height: calc(100vh - 60px);
+    padding: 20px;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 1000;
   }
 
-	
- .nav-links li {
-   width: 100%;
-   margin-bottom: 20px;
+  .nav-links.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
- .nav-links li a {
-   display: block;
-   width: 100%;
-   padding: 10px 0;
-   text-align: left;
-   word-break: break-word;
-   font-size: 18px;
-   color: #fff; /* changed to white for contrast on blue */
-   text-decoration: none;
-  }
-
-
-  .search-form {
+  .nav-links li {
     width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: left;
+    word-break: break-word;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Search form centered below */
+  .search-form {
+    width: 90%;
+    max-width: 400px;
     display: flex;
     gap: 8px;
     margin-top: 10px;
-   }
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .search-form input {
     flex-grow: 1;
     padding: 8px;
-   }
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+  }
 
   .search-form button {
     padding: 8px 12px;
-   }
-
-  .hamburger {
-  display: block;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: #333;
-  cursor: pointer;
-  z-index: 10;
- }
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #eee;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
 }
 
 
