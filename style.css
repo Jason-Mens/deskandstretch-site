@@ -597,6 +597,17 @@ footer {
     background-color: #eee;
     cursor: pointer;
   }
+
+  .close-btn {
+   font-size: 28px;
+   background: none;
+   border: none;
+   color: #fff; /* or your menu link color */
+   cursor: pointer;
+   align-self: flex-end;
+   margin-bottom: 20px;
+ }
+
 }
 
 
