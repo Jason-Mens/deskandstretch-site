@@ -470,12 +470,21 @@ footer {
 
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
-  nav ul {
+  nav {
+    width: 100%;
+    padding: 10px;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+  }
+
+  nav ul {
+    width: 100%;
     padding: 0;
-    margin: 0;
+    margin: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   nav ul li {
@@ -485,13 +494,8 @@ footer {
   nav ul li a {
     display: block;
     width: 100%;
-    padding: 10px 0;
-    word-break: break-word;
-  }
-
-  nav {
-    width: 100%;
-    overflow-x: hidden;
+    padding: 8px 0;
+    text-align: left;
   }
 
   body {
