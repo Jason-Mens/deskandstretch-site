@@ -28,7 +28,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 
@@ -47,7 +47,7 @@ body {
     margin: 0;
     padding: 0;
     justify-content: center;
-	margin-left: 280px;
+    margin-left: 280px;
 }
 
 
@@ -470,91 +470,54 @@ footer {
 
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
-  nav {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    box-sizing: border-box;
-  }
-
-  nav ul {
-    width: 100%;
-    padding: 0;
-    margin: 10px 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    box-sizing: border-box;
-  }
-
-  nav ul li {
-    width: 100%;
-  }
-
-  nav ul li a {
-    display: block;
-    width: 100%;
-    padding: 8px 0;
-    text-align: left;
-    box-sizing: border-box;
-    word-break: break-word;
-  }
-
   body {
     overflow-x: hidden;
   }
 
-
-  .hero {
+  .navbar .container {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    gap: 10px;
   }
 
-  .hero img {
-    max-width: 100%;
-    height: auto;
+  .logo {
+    font-size: 1.4em;
+    margin-bottom: 10px;
   }
 
-  .hero-text {
-    margin: 10px 0;
-  }
-
-  .about-container,
-  .blog-grid {
+  .nav-links {
     flex-direction: column;
-    gap: 20px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
-  .about-text,
-  .about-image,
-  .blog-card {
+  .nav-links li {
     width: 100%;
   }
 
-  .blog-card img {
+  .nav-links li a {
+    display: block;
     width: 100%;
-    height: auto;
+    padding: 10px 0;
+    text-align: left;
+    word-break: break-word;
   }
 
-  footer {
-    text-align: center;
-    padding: 20px 10px;
+  .search-form {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
   }
 
-  .blog-card h3 {
-    font-size: 1.2em;
+  .search-form input {
+    flex-grow: 1;
+    padding: 8px;
   }
 
-  .blog-card p {
-    font-size: 1em;
-  }
-
-  button,
-  a.button {
-    padding: 10px 16px;
-    font-size: 1em;
+  .search-form button {
+    padding: 8px 12px;
   }
 }
 
