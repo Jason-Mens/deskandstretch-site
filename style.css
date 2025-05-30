@@ -537,7 +537,7 @@ footer {
     flex-direction: column;
     background-color: #1976d2;
     position: fixed;
-    top: 80px; /* Adjust based on navbar height */
+    top: 120px; /* Adjust based on navbar height */
     right: 0;
     width: 70vw;
     max-width: 300px;
