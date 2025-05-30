@@ -468,4 +468,50 @@ footer {
     text-align: center;
 }
 
+/* === MOBILE RESPONSIVENESS === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    padding: 5px 0;
+  }
+
+  header {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .blog-preview {
+    grid-template-columns: 1fr; /* Stack blog cards on small screens */
+  }
+
+  .blog-inline-image {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
 
