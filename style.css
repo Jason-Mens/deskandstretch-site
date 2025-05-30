@@ -651,3 +651,66 @@ footer {
   display: none;
 }
 
+/* Always hide nav links by default on small screens */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: white;
+  height: 100vh;
+  width: 80%;
+  padding: 40px 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Show nav links when active */
+.nav-links.active {
+  display: flex;
+}
+
+/* Style the hamburger button */
+.hamburger {
+  display: none; /* Hidden by default, shown below */
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Style for the close button inside nav */
+.close-btn {
+  align-self: flex-end;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Responsive: Show hamburger on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
