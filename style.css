@@ -468,13 +468,7 @@ footer {
     text-align: center;
 }
 
-.hamburger {
-  display: none;
-}
 
-.close-btn {
-  display: none;
-}
 
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
@@ -537,7 +531,7 @@ footer {
     flex-direction: column;
     background-color: #1976d2;
     position: fixed;
-    top: 20px; /* Adjust based on navbar height */
+    top: 0px; /* Adjust based on navbar height */
     right: 0;
     width: 70vw;
     max-width: 300px;
@@ -644,5 +638,11 @@ footer {
   }
 }
 
+.hamburger {
+  display: none;
+}
 
+.close-btn {
+  display: none;
+}
 
