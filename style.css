@@ -499,45 +499,48 @@ footer {
     margin-bottom: 10px;
    }
 
-	.nav-links {
-	  display: flex; /* always flex so transform can animate */
-	  flex-direction: column;
-	  background-color: blue;
-	  position: fixed;
-	  top: 60px; /* Adjust to navbar height */
-	  left: 0;
-	  width: 70%;
-	  padding: 10px 20px;
-	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	  transform: translateX(100%);
-	  opacity: 0;
-	  pointer-events: none; /* ignore clicks when hidden */
-	  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-	  overflow-y: auto;
-	  z-index: 1000;
-	}
+ .nav-links {
+   display: flex;
+   flex-direction: column;
+   background-color: blue;
+   position: fixed;
+   top: 60px; /* Adjust based on navbar height */
+   right: 0; /* position on the right side */
+   width: 70vw; /* about 70% of viewport width */
+   max-width: 300px; /* optional max width */
+   height: calc(100vh - 60px); /* full height minus navbar */
+   padding: 20px;
+   box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1); /* shadow on left */
+   transform: translateX(100%); /* start offscreen right */
+   opacity: 0;
+   pointer-events: none;
+   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+   overflow-y: auto;
+   z-index: 1000;
+  }
+
+ .nav-links.active {
+   transform: translateX(0);
+   opacity: 1;
+   pointer-events: auto;
+  }
+
 	
-	.nav-links.active {
-	  transform: translateX(0);
-	  opacity: 1;
-	  pointer-events: auto; /* enable clicks when visible */
-	}
-	
-	.nav-links li {
-	  width: 100%;
-	  margin-bottom: 20px;
-	}
-	
-	.nav-links li a {
-	  display: block;
-	  width: 100%;
-	  padding: 10px 0;
-	  text-align: left;
-	  word-break: break-word;
-	  font-size: 18px;
-	  color: #fff; /* changed to white for contrast on blue */
-	  text-decoration: none;
-	}
+ .nav-links li {
+   width: 100%;
+   margin-bottom: 20px;
+  }
+
+ .nav-links li a {
+   display: block;
+   width: 100%;
+   padding: 10px 0;
+   text-align: left;
+   word-break: break-word;
+   font-size: 18px;
+   color: #fff; /* changed to white for contrast on blue */
+   text-decoration: none;
+  }
 
 
   .search-form {
