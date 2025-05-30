@@ -505,17 +505,22 @@ footer {
   }
 
   /* Hamburger positioned absolute left in top row */
-  .hamburger {
-    display: block;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: #333;
-    cursor: pointer;
-    position: absolute;
-    left: 0;
-    z-index: 10;
-  }
+ .hamburger {
+   display: block;
+   font-size: 28px;
+   background: none;
+   border: none;
+   color: #333;
+   cursor: pointer;
+   position: absolute;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 1001;
+   padding: 10px;
+   background-color: white;
+ }
+
 
   /* Logo centered */
   .logo {
