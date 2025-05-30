@@ -468,39 +468,47 @@ footer {
     text-align: center;
 }
 
-@media (max-width: 768px) {
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
   body {
-    padding: 0 10px;
+    padding: 10px;
+    font-size: 16px;
   }
 
   nav ul {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
-    padding: 10px;
+    gap: 10px;
   }
 
   nav ul li {
-    padding: 4px 0;
+    margin: 5px 0;
   }
 
-  header {
-    padding: 40px 10px;
+  .hero {
+    flex-direction: column;
     text-align: center;
   }
 
-  .hero h1 {
-    font-size: 28px;
+  .hero img {
+    max-width: 100%;
+    height: auto;
   }
 
-  .hero p {
-    font-size: 16px;
+  .hero-text {
+    margin: 10px 0;
   }
 
-  .blog-preview {
-    display: grid;
-    grid-template-columns: 1fr;
+  .about-container,
+  .blog-grid {
+    flex-direction: column;
     gap: 20px;
+  }
+
+  .about-text,
+  .about-image,
+  .blog-card {
+    width: 100%;
   }
 
   .blog-card img {
@@ -508,22 +516,23 @@ footer {
     height: auto;
   }
 
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .about-image img {
-    width: 100%;
-    max-width: 300px;
-  }
-
   footer {
-    padding: 20px;
     text-align: center;
-    font-size: 14px;
+    padding: 20px 10px;
+  }
+
+  .blog-card h3 {
+    font-size: 1.2em;
+  }
+
+  .blog-card p {
+    font-size: 1em;
+  }
+
+  button,
+  a.button {
+    padding: 10px 16px;
+    font-size: 1em;
   }
 }
 
