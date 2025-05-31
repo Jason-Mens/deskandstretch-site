@@ -663,6 +663,81 @@ footer {
   display: flex;
 }
 
+/* Responsive Adjustments for Mobile Devices */
+@media (max-width: 768px) {
+  /* Navbar stack */
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .search-form {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Hero section padding reduced */
+  .hero {
+    padding: 60px 16px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* About container stacking */
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Image strip column layout */
+  .image-strip {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-strip img {
+    max-width: 100%;
+  }
+
+  /* Latest posts spacing */
+  .latest-posts li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-thumb {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Blog cards grid tighter spacing */
+  .grid-container {
+    gap: 16px;
+  }
+
+  .blog-card img {
+    height: 200px;
+  }
+
+  .contact-container {
+    margin: 20px;
+    padding: 16px;
+  }
+}
 
 
 
