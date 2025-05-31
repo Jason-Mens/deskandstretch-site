@@ -635,15 +635,15 @@ footer {
 }
 
 /* Default Hidden States */
-.hamburger {
-  display: none;
+@media (min-width: 768px){
+  .hamburger {
+    display: none;
+  }
+
+  .close-btn {
+    display: none;
+  }
 }
-
-.close-btn {
-  display: none;
-}
-
-
 
 
 
