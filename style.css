@@ -659,13 +659,14 @@ footer {
     flex: 1 0 auto; /* Don't shrink nav-links */
   }
 
-  .nav-links li a {
-    font-size: 16px;
+   .nav-links li a {
+    font-size: clamp(12px, 1.5vw, 14px); /* smaller font */
+    padding: 4px 8px;      /* tighter padding */
     white-space: nowrap;
-    padding: 6px 10px;
     color: white;
     text-decoration: none;
   }
+
 
   .search-form {
     grid-area: search;
