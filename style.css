@@ -522,17 +522,18 @@ footer {
     font-weight: bold;
   }
 
-  .nav-links {
+   .nav-links {
     display: flex;
     flex-direction: column;
     background-color: #1976d2;
     position: fixed;
-    top: 10px;
+    top: 0;
     right: 0;
     width: 70vw;
     max-width: 300px;
-    height: calc(100vh - 60px);
-    padding: 20px;
+    min-height: 100vh;
+    height: 100%;
+    padding: 80px 20px 20px 20px; /* Top padding to push content down below hamburger */
     box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
     transform: translateX(100%);
     opacity: 0;
@@ -541,6 +542,7 @@ footer {
     overflow-y: auto;
     z-index: 1000;
   }
+
 
   .nav-links.active {
     transform: translateX(0);
