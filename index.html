@@ -132,6 +132,20 @@
       			navLinks.classList.remove('active');
     		});
   	});
+	const hamburger = document.querySelector('.hamburger');
+	const closeBtn = document.querySelector('.close-btn');
+	const navLinks = document.querySelector('.nav-links');
+	
+	hamburger.addEventListener('click', () => {
+	  navLinks.classList.add('active');
+	  document.body.classList.add('menu-open'); // 🔥 Add this
+	});
+	
+	closeBtn.addEventListener('click', () => {
+	  navLinks.classList.remove('active');
+	  document.body.classList.remove('menu-open'); // 🔥 And this
+	});
+
     </script>
 
 
