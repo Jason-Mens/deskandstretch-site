@@ -618,32 +618,28 @@ footer {
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .navbar .container {
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0 16px;
   }
 
   .navbar .top-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    gap: 20px;
+    gap: 16px;
+    flex-wrap: wrap; /* fallback if things need to wrap */
   }
 
   .logo {
-    flex-shrink: 0;
     font-size: 1.6em;
-    text-align: left;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
   .search-form {
     display: flex;
-    flex: 1;
-    max-width: 600px;
+    flex: 1 1 200px; /* Can shrink or grow */
+    max-width: 400px;
     gap: 8px;
-    justify-content: flex-end;
   }
 
   .search-form input {
@@ -654,5 +650,24 @@ footer {
 
   .search-form button {
     padding: 8px 12px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #333;
+  }
+
+  .hamburger, .close-btn {
+    display: none !important;
   }
 }
