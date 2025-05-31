@@ -513,7 +513,6 @@ footer {
     transform: translateY(-50%);
     z-index: 1001;
     padding: 10px;
-    background-color: white;
   }
 
   .logo {
