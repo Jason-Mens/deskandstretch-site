@@ -760,7 +760,7 @@ body.menu-open::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(6px);  /* Blur effect */
+  backdrop-filter: blur(2px);  /* Blur effect */
   background-color: rgba(0, 0, 0, 0.3);  /* Optional dark overlay */
   z-index: 999; /* Should be just below .nav-links */
 }
