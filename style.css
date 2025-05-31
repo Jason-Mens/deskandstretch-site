@@ -618,28 +618,43 @@ footer {
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .navbar .container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .navbar .top-row {
-    flex-direction: column;
+    display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .logo {
+    flex-shrink: 0;
+    font-size: 1.6em;
   }
 
   .search-form {
-    width: 90%;
+    display: flex;
+    flex-grow: 1;
     max-width: 500px;
-    margin: 0 auto;
-    justify-content: center;
+    justify-content: flex-end;
+    gap: 8px;
   }
 
   .search-form input {
+    flex-grow: 1;
+    padding: 8px;
     font-size: 1em;
   }
+
+  .search-form button {
+    padding: 8px 12px;
+  }
 }
-
-
 
