@@ -618,27 +618,62 @@ footer {
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .navbar .container {
-    padding: 0 16px;
+    display: grid;
+    grid-template-areas: 
+      "logo nav search";
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 16px;
   }
 
-  .navbar .top-row {
+  .top-row {
+    grid-area: logo;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap; /* fallback if things need to wrap */
   }
 
   .logo {
     font-size: 1.6em;
-    flex-shrink: 0;
-    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .hamburger,
+  .close-btn {
+    display: none !important;
+  }
+
+  .nav-links {
+    grid-area: nav;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    background: none;
+    position: static;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .nav-links li {
+    margin-bottom: 0;
+  }
+
+  .nav-links li a {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    padding: 6px 12px;
   }
 
   .search-form {
+    grid-area: search;
     display: flex;
-    flex: 1 1 200px; /* Can shrink or grow */
-    max-width: 400px;
+    max-width: 300px;
     gap: 8px;
   }
 
@@ -650,24 +685,5 @@ footer {
 
   .search-form button {
     padding: 8px 12px;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex-shrink: 0;
-  }
-
-  .nav-links li a {
-    text-decoration: none;
-    font-size: 1em;
-    color: #333;
-  }
-
-  .hamburger, .close-btn {
-    display: none !important;
   }
 }
