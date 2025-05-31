@@ -623,8 +623,10 @@ footer {
       "logo nav search";
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     padding: 16px;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   .top-row {
@@ -635,7 +637,7 @@ footer {
 
   .logo {
     font-size: 1.6em;
-    font-weight: bold;
+    white-space: nowrap;
   }
 
   .hamburger,
@@ -646,44 +648,42 @@ footer {
   .nav-links {
     grid-area: nav;
     display: flex;
-    gap: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
     justify-content: center;
     padding: 0;
     list-style: none;
-    background: none;
-    position: static;
-    transform: none;
-    opacity: 1;
-    pointer-events: auto;
-    height: auto;
-    box-shadow: none;
-  }
-
-  .nav-links li {
-    margin-bottom: 0;
+    margin: 0;
+    min-width: 0;
+    overflow: hidden;
   }
 
   .nav-links li a {
     font-size: 16px;
+    white-space: nowrap;
+    padding: 6px 10px;
     color: #333;
     text-decoration: none;
-    padding: 6px 12px;
   }
 
   .search-form {
     grid-area: search;
     display: flex;
-    max-width: 300px;
     gap: 8px;
+    min-width: 0;
+    max-width: 240px;
+    width: 100%;
   }
 
   .search-form input {
     flex-grow: 1;
+    min-width: 0;
     padding: 8px;
     font-size: 1em;
   }
 
   .search-form button {
     padding: 8px 12px;
+    white-space: nowrap;
   }
 }
