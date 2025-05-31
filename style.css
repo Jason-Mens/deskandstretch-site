@@ -636,7 +636,7 @@ footer {
   }
 
   .logo {
-    font-size: 1.6em;
+    font-size: clamp(1.2em, 2.5vw, 1.6em); /* Shrinks on smaller widths */
     white-space: nowrap;
   }
 
