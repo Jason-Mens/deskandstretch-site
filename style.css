@@ -618,10 +618,8 @@ footer {
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .navbar .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -637,14 +635,15 @@ footer {
   .logo {
     flex-shrink: 0;
     font-size: 1.6em;
+    text-align: left;
   }
 
   .search-form {
     display: flex;
-    flex-grow: 1;
-    max-width: 500px;
-    justify-content: flex-end;
+    flex: 1;
+    max-width: 600px;
     gap: 8px;
+    justify-content: flex-end;
   }
 
   .search-form input {
@@ -657,4 +656,3 @@ footer {
     padding: 8px 12px;
   }
 }
-
