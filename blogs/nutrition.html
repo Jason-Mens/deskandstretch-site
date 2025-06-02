@@ -8,24 +8,28 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar">
-            <div class="container">
-                <a href="../index.html" class="logo">Desk and Stretch</a>
-
-                <ul class="nav-links">
-                    <li><a href="workouts.html">Workouts</a></li>
-                    <li><a href="nutrition.html">Nutrition and Food</a></li>
-                    <li><a href="stress-relief.html">Stress Relief</a></li>
-                    <li><a href="../contact.html">Contact us</a></li>
-                    <li><a href="../about.html">About</a></li>
-                </ul>
-
-                <form action="/search" method="GET" class="search-form">
-                    <input type="text" name="q" placeholder="Search blog posts..." />
-                    <button type="submit">🔍</button>
-                </form>
-            </div>
-        </nav>
+	<nav class="navbar"> 
+	  <div class="container">
+	    <div class="top-row">
+	      <a href="../index.html" class="logo">Desk and Stretch</a>
+	      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+	    </div>
+	
+	    <ul class="nav-links" id="nav-links">
+	      <button class="close-btn" id="close-btn" aria-label="Close menu">✖</button>
+	      <li><a href="workouts.html">Workouts</a></li>
+	      <li><a href="nutrition.html">Nutrition and Food</a></li>
+	      <li><a href="stress-relief.html">Stress Relief</a></li>
+	      <li><a href="../contact.html">Contact us</a></li>
+	      <li><a href="../about.html">About</a></li>
+	    </ul>
+	
+	    <form action="/search" method="GET" class="search-form">
+	      <input type="text" name="q" placeholder="Search blog posts..." />
+	      <button type="submit">🔍</button>
+	    </form>
+	  </div>
+	</nav>
 
         <!-- Main Content -->
         <main class="blog-hub">
