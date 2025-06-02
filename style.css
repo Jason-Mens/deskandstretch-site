@@ -749,6 +749,7 @@ footer {
     white-space: nowrap;
   }
 }
+
 body.menu-open {
   overflow: hidden; /* Prevent background scrolling */
 }
