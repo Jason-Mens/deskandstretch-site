@@ -24,6 +24,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<div class="notification-banner" id="errorBanner">
+    <p>🔍 Our search feature is temporarily unavailable. We're working on a fix—thanks for your patience!</p>
+    <button class="close-button">&times;</button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const errorBanner = document.getElementById('errorBanner');
+        const closeButton = errorBanner.querySelector('.close-button');
+
+        if (closeButton) { // Ensure the button exists before adding listener
+            closeButton.addEventListener('click', function() {
+                errorBanner.style.display = 'none';
+            });
+        }
+    });
+</script>
+	  
 <nav class="navbar"> 
   <div class="container">
 	<div class="top-row">
