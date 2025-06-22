@@ -10,6 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WR7TTP94');</script>
 <!-- End Google Tag Manager -->
+
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Desk Stretch Routine | Simple Exercises for Remote Workers</title>
@@ -41,10 +43,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	  <li><a href="/about/">About</a></li>
 	</ul>
 
-	<form action="/search" method="GET" class="search-form">
-	  <input type="text" name="q" placeholder="Search blog posts..." />
-	  <button type="submit">🔍</button>
-	</form>
+	<div id="search"></div>
   </div>
 </nav>
 
@@ -57,7 +56,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <img src="/images/man-stretching.jpg" alt="Person stretching at desk" class="blog-hero-image" />
 
       <p>
-        Sitting all day can make your shoulders stiff, your back ache, and your legs restless. Here’s a quick stretch routine you can do at your desk — no gym, no mat, just movement.
+        Sitting all day can make your shoulders stiff, your back ache, and your legs restless. Here's a quick stretch routine you can do at your desk — no gym, no mat, just movement.
       </p>
 
       <h2>1. Neck Rolls</h2>
@@ -80,7 +79,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <h2>4. Forward Fold</h2>
       <p>
-        Stand up, hinge at your hips, and let your arms and head hang. It’s great for decompressing your spine and letting blood flow to your head.
+        Stand up, hinge at your hips, and let your arms and head hang. It's great for decompressing your spine and letting blood flow to your head.
       </p>
 
       <h2>5. Wrist Stretch</h2>
@@ -96,6 +95,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>&copy; 2025 Desk and Stretch. All rights reserved.</p>
     </footer>
 
-	<script src="/scripts/navbar.js" defer></script>
+    <script type="module">
+  import '/pagefind/pagefind-ui.js';
+  new window.PagefindUI({ element: "#search" });
+</script> 
+
   </body>
 </html>

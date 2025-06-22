@@ -10,6 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WR7TTP94');</script>
 <!-- End Google Tag Manager -->
+
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>About | Desk & Stretch</title>
@@ -41,10 +43,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	  <li><a href="/about/">About</a></li>
 	</ul>
 
-	<form action="/search" method="GET" class="search-form">
-	  <input type="text" name="q" placeholder="Search blog posts..." />
-	  <button type="submit">🔍</button>
-	</form>
+	<div id="search"></div>
   </div>
 </nav>
 
@@ -55,11 +54,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <p><strong>Desk and Stretch</strong> is your go-to space for simple, effective wellness tips designed specifically for remote workers.</p>
 
-        <p>We get it—working from home can blur the lines between productivity and burnout. That’s why we’re here to help you build a lifestyle that supports both your work and well-being.</p>
+        <p>We get it—working from home can blur the lines between productivity and burnout. That's why we're here to help you build a lifestyle that supports both your work and well-being.</p>
 
         <p>From desk-friendly workouts and easy meal prep ideas to stress relief techniques you can do in minutes, we provide practical advice that fits into your busy schedule—no fancy equipment, gym memberships, or hours of free time needed.</p>
 
-        <p>We believe that wellness isn’t about perfection—it’s about progress, consistency, and choosing habits that support your health, energy, and peace of mind. Let’s make that easier, together.</p>
+        <p>We believe that wellness isn't about perfection—it's about progress, consistency, and choosing habits that support your health, energy, and peace of mind. Let's make that easier, together.</p>
 		
 		<p style="color:blue;"><a href="/contact/"><b>Contact Us</b></a></p>
 	</main>
@@ -70,6 +69,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>&copy; 2025 Desk and Stretch. All rights reserved.</p>
     </footer>
 
-	<script src="/scripts/navbar.js" defer></script>
+    <script type="module">
+  import '/pagefind/pagefind-ui.js';
+  new window.PagefindUI({ element: "#search" });
+</script> 
+
 </body>
 </html>

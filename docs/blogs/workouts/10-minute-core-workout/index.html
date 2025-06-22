@@ -10,6 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WR7TTP94');</script>
 <!-- End Google Tag Manager -->
+
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>10-Minute Core Workout | Desk & Stretch</title>
@@ -40,10 +42,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	  <li><a href="/about/">About</a></li>
 	</ul>
 
-	<form action="/search" method="GET" class="search-form">
-	  <input type="text" name="q" placeholder="Search blog posts..." />
-	  <button type="submit">🔍</button>
-	</form>
+	<div id="search"></div>
   </div>
 </nav>
 
@@ -56,7 +55,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img src="/images/core-workout-hero.jpg" alt="Person doing plank exercise" class="blog-hero-image" />
 
             <p>
-                Want to strengthen your core without leaving the house or using equipment? Here’s a short, effective 10-minute routine you can do right next to your desk.
+                Want to strengthen your core without leaving the house or using equipment? Here's a short, effective 10-minute routine you can do right next to your desk.
             </p>
 
             <h2>1. Plank (30 seconds)</h2>
@@ -79,7 +78,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <h2>4. Mountain Climbers (30 seconds)</h2>
             <p>
-                From a plank position, drive your knees to your chest alternately. It’s cardio and core in one!
+                From a plank position, drive your knees to your chest alternately. It's cardio and core in one!
             </p>
 
             <h2>Repeat</h2>
@@ -95,6 +94,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>&copy; 2025 Desk and Stretch. All rights reserved.</p>
         </footer>
 
-		<script src="/scripts/navbar.js" defer></script>
+        <script type="module">
+  import '/pagefind/pagefind-ui.js';
+  new window.PagefindUI({ element: "#search" });
+</script> 
+
     </body>
 </html>

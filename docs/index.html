@@ -10,6 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WR7TTP94');</script>
 <!-- End Google Tag Manager -->
+
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
     <title>Desk & Stretch | Quick Desk Workouts & Wellness Tips</title>
@@ -24,24 +26,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div class="notification-banner" id="errorBanner">
-    <p>🔍 Our search feature is temporarily unavailable. We're working on a fix—thanks for your patience!</p>
-    <button class="close-button">&times;</button>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const errorBanner = document.getElementById('errorBanner');
-        const closeButton = errorBanner.querySelector('.close-button');
-
-        if (closeButton) { // Ensure the button exists before adding listener
-            closeButton.addEventListener('click', function() {
-                errorBanner.style.display = 'none';
-            });
-        }
-    });
-</script>
-	  
 <nav class="navbar"> 
   <div class="container">
 	<div class="top-row">
@@ -58,10 +42,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	  <li><a href="/about/">About</a></li>
 	</ul>
 
-	<form action="/search" method="GET" class="search-form">
-	  <input type="text" name="q" placeholder="Search blog posts..." />
-	  <button type="submit">🔍</button>
-	</form>
+	<div id="search"></div>
   </div>
 </nav>
 
@@ -148,6 +129,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <footer>
       <p>&copy; 2025 Desk and Stretch. All rights reserved.</p>
     </footer>
+
+    <script type="module">
+  import '/pagefind/pagefind-ui.js';
+  new window.PagefindUI({ element: "#search" });
+</script> 
 
 	<script src="/scripts/navbar.js" defer></script>
 
